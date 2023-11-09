@@ -19,26 +19,24 @@
               <a class="navbar-opc" href="#">Blog</a>
               <a class="navbar-opc" href="#">Contacto</a>
             </div>
-            <button class="r-menu">
+            <div class="r-menu">
                 <span class="img-m url-menu"></span>
-            </button>
+            </div>
         </nav>
     </header>
+    <main>
+        <div class="container-main">
+            <section class="elementor-section element-1">
+                <img src="./img/zavoobl011bus-1024x1024.jpg" alt="">
+            </section>
+            <section class="elementor-section element-2">
+                <img src="./img/ZavooAsian6-768x768.jpg" alt="">
+            </section>
 
-    <script>
-        $btnMenu= document.querySelector(".img-m")
+        </div>
+    </main>
 
-        $btnMenu.addEventListener("click", e=>{
-            console.log(document.querySelector(".container-nav-l"));
-            e.target.classList.toggle("url-togg")
-            document.querySelector("header").classList.toggle("head-togg")
-            document.querySelector(".navbar").classList.toggle("navbar-togg")
-            document.querySelector(".container-nav-l").classList.toggle("nav-l-togg")
-            if (e.target.classList.contains("navbar-togg")){
-                document.querySelector(".logo").style.transform=("translate(-100%)")
-            }
-        })
-    </script>
+    <script src="./js/index.js"></script>
     
 </body>
 </html>
