@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon_zavooclubntf.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home - zavoo club nft</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span class="logo"><img src="img/logo.png" alt=""></span>
+            <div class="container-nav-l">
+              <a class="navbar-opc" href="#">Home</a>
+              <a class="navbar-opc" href="#">Quiénes somos</a>
+              <a class="navbar-opc" href="#">NFTs</a>
+              <a class="navbar-opc" href="#">White paper</a>
+              <a class="navbar-opc" href="#">Blog</a>
+              <a class="navbar-opc" href="#">Contacto</a>
+            </div>
+            <button class="r-menu">
+                <span class="img-m url-menu"></span>
+            </button>
+        </nav>
+    </header>
+
+    <script>
+        $btnMenu= document.querySelector(".img-m")
+
+        $btnMenu.addEventListener("click", e=>{
+            console.log(document.querySelector(".container-nav-l"));
+            e.target.classList.toggle("url-togg")
+            document.querySelector("header").classList.toggle("head-togg")
+            document.querySelector(".navbar").classList.toggle("navbar-togg")
+            document.querySelector(".container-nav-l").classList.toggle("nav-l-togg")
+        })
+    </script>
+    
+</body>
+</html>
