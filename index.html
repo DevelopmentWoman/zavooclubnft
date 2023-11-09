@@ -34,6 +34,9 @@
             document.querySelector("header").classList.toggle("head-togg")
             document.querySelector(".navbar").classList.toggle("navbar-togg")
             document.querySelector(".container-nav-l").classList.toggle("nav-l-togg")
+            if (e.target.classList.contains("navbar-togg")){
+                document.querySelector(".logo").style.transform=("translate(-100%)")
+            }
         })
     </script>
     
