@@ -35,5 +35,6 @@ document.addEventListener("click", e=>{
         document.querySelector(".container-nav-l").classList.toggle("nav-l-togg")
         document.querySelector(".logo").classList.toggle("hidd-logo")
         document.querySelector("main").classList.toggle("disp-none")
+        document.querySelector("footer").classList.toggle("disp-none")
     }
 })
