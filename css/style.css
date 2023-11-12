@@ -4,8 +4,10 @@
     --bg-l-g: #f5f5f7;
     --menu-clr: #fbfbfd;
     --main-bg: rgba(250,250,250,.6);
+    --clr-disab: rgb(85, 84, 84);
+    --clr-link-g: rgb(87, 84, 84);
     --nav-bg: rgba(29,29,31);
-    --nav-l-bg: rgba(22, 22, 23, .2);
+    --nav-l-bg: rgba(22, 22, 23, 0.5);
 }
 
 *{
@@ -57,8 +59,12 @@ header{
     visibility: hidden;
 
 }
-.container-nav-l>a{
+a{
     text-decoration: none;
+}
+
+.container-nav-l>a{
+
     font-size: 1.75rem;
     line-height: 1.1428571429;
     font-weight: 700;
@@ -86,7 +92,7 @@ header{
     background-position: right;
 }
 
-/* --------------------------------Main-------------------------------------- */
+/* --------------------------------MAIN INDEX-------------------------------------- */
 
 .container-main{
     margin-top: 6rem;
@@ -102,34 +108,37 @@ header{
 
 .elementor-section{
     width: 100%;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .elementor-section>img{
-    animation: start-img .6s ease-in both;
+    /* animation: start-img .6s ease-in both; */
 
 }
 .element-2{
     flex-direction: column;
+    gap: 2rem;
  }
 
 .elementor-section>img, .img-form>img{
-    width: 100%;
+    width: 100%; 
+    aspect-ratio: 1/1;
+    
 }
 .img-form{
     display: flex;
     justify-content: center;
-    animation: start-img .6s 0.2s ease-in both;
+    /* animation: start-img .6s 0.2s ease-in both; */
 
  }
 
-/* ------------------------------SECTION REGISTER----------------------------- */
+/* --SECTION REGISTER--*/
 .register-index{
     width: 100%;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     padding: 2rem 1rem;
     background-color: var(--bg-l-g);
 }
@@ -189,10 +198,12 @@ header{
 
 
 
+
+
 /* ------------------------------------------FOOTER-------------------------------------------------------------------- */
 
 footer{
-    margin: 3rem 0 0;
+    margin: 2rem 0 0;
     padding: .3rem;
     height: 20vh;
     background-color: var(--nav-bg);
@@ -230,7 +241,180 @@ footer{
 
 
 
-/*-------------------- Add class in javaScript------------------------ */
+/* ------------------------ABOUT SECTION---------------------------------------------------------------- */
+
+/* --------------------------------------------MAIN ABOUT------------------------------------------------ */
+.cont-main-about{
+    gap: 12rem;
+}
+h2{
+    font-size: 2rem;
+
+}
+.barnner-about{
+    height: 20vh;
+}
+.barnner-about>img{
+    width: 100%;
+}
+
+
+/* ------------------------CONTACT SECTION---------------------------------------------------------------- */
+
+/* --------------------------------------------MAIN CONTACT------------------------------------------------ */
+.cont-main-contac{
+    gap: 2rem;
+}
+.cont-comment>textarea{
+    width: 100%;
+    height: 5rem;
+    background: none;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(43,171,86,.5) 16%, rgba(149,14,142,.5) 75%, rgba(226,29,15,.5) 100%);
+}
+
+
+
+/*--------------------------NTFs SECTION----------------------------------*/
+
+.ntfs-container{
+    position: relative;
+    width: 30%;
+    aspect-ratio: 1/1.1;
+}
+.slide-container{
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+
+}
+
+.slide-container .slide .item{
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    aspect-ratio: 1/1.1;
+    transform: translate(0,-50%);
+    border-radius: 10px;
+    background-position: 50%,50%;
+    background-size: cover;
+    display: inline-block;
+    transition: .5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3){
+    left: 80%;
+}
+.slide .item:nth-child(4){
+    left: calc(80% + 2rem);
+}
+.slide .item:nth-child(5){
+    left: calc(80% + 4rem);
+}
+.slide .item:nth-child(n+6){
+    left: calc(80% + 4rem);
+    opacity: 0;
+}
+
+.slide-container .button{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    bottom: .2rem;
+}
+
+
+.slide-container .button button{
+    width: .6rem; 
+    /* padding: .2rem;     */
+    background-color: var(--bg-l-g);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin: 0 .15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid var(--bg-l-g);  */
+    transition: 0.3s;
+}
+.slide-container .button button>svg{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.img-form-nfts{
+    width: 50%;
+    aspect-ratio: 1/1;
+}
+.img-form-nfts>img{
+    width: 100%;
+}
+
+.element-2>h2>a{
+    
+    color: black;
+    /* font-weight: 700; */
+}
+.element-2>p{
+    padding: 0 1rem;
+    text-align: justify;
+}
+
+
+/* -----------------------------BLOG---------------------------------------- */
+
+.container-main>h2{
+    text-align: center;    
+}
+.elementor-section>article{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+article .cont-des{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+article a img{
+    width: 100%;
+}
+
+.cont-des>h5>a, article a img, {
+    cursor:pointer
+}
+.cont-des>h3>a{
+    color: var(--nav-bg);
+}
+.cont-des>h5, .cont-des>h5>a{
+    color: var(--clr-disab);
+    font-weight: 400;
+}
+.cont-des .read-m>a{
+    color: var(--clr-link-g);
+    font-weight: 700;
+}
+.cont-des>p{
+    text-align: justify;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    letter-spacing: .03rem;
+}
+/*-------------------- ADD CLASS IN JAVASCRIPT (INDEX)----------------------- */
 
 .url-togg{
     background: url(../img/close.svg);
