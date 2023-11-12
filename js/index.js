@@ -23,7 +23,7 @@ if (document.querySelector(".slide-container")!=undefined){
 
 
     if (!nIntervId) {
-        nIntervId = setInterval(funcIntervPhoto, 10000);
+        nIntervId = setInterval(funcIntervPhoto, 5000);
     }
     
     
@@ -38,13 +38,22 @@ if (document.querySelector(".slide-container")!=undefined){
 document.addEventListener("click", e=>{
     let $next = document.querySelector('.svg-next')
     let $prev = document.querySelector('.svg-prev')
+    
+
     if (e.target == document.querySelector(".img-m")){
         e.target.classList.toggle("url-togg")
         document.querySelector("header").classList.toggle("head-togg")
         document.querySelector(".container-nav-l").classList.toggle("nav-l-togg")
-        document.querySelector(".logo").classList.toggle("hidd-logo")
         document.querySelector("main").classList.toggle("disp-none")
         document.querySelector("footer").classList.toggle("disp-none")
+        if (document.querySelector(".logo").matches(".hidd-logo")){
+           setTimeout(()=>{
+            document.querySelector(".logo").classList.remove("hidd-logo")
+           },400) 
+        }else{
+            document.querySelector(".logo").classList.add("hidd-logo")
+        }
+        
     }
     
     if (e.target == $next){
