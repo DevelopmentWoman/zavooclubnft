@@ -17,6 +17,8 @@
 }
 
 body{
+    position: relative;
+    min-height: 100%;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -93,9 +95,15 @@ a{
 }
 
 /* --------------------------------MAIN INDEX-------------------------------------- */
-
+main{
+    /* position: relative; */
+    width: 100%;
+    margin-top: 7vh;
+    /* top: 7vh; */
+    min-height: 73vh;
+}
 .container-main{
-    margin-top: 6rem;
+
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -203,6 +211,9 @@ a{
 /* ------------------------------------------FOOTER-------------------------------------------------------------------- */
 
 footer{
+    /* position: absolute; */
+    width: 100%;
+    /* bottom: -7vh; */
     margin: 2rem 0 0;
     padding: .3rem;
     height: 15vh;
@@ -245,7 +256,7 @@ footer{
 
 /* --------------------------------------------MAIN ABOUT------------------------------------------------ */
 .cont-main-about{
-    gap: 12rem;
+    /* gap: 12rem; */
 }
 h2{
     font-size: 2rem;
@@ -520,6 +531,15 @@ p>a{
 .page-content ol li{
     margin-bottom: 1rem;
     text-align: justify;
+}
+
+/*---------------------------------CHECK WALLET----------------------------*/
+.main-check-wallet{
+    padding: 0 1rem;
+}
+.Check-wallet-scan .ch-search input[type="button"] {
+    background-image: url();
+
 }
 
 
