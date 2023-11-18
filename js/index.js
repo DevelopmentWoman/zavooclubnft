@@ -1,5 +1,5 @@
 let nIntervId
-const $containerCards = document.querySelector(".Check-wallet-collect");
+
 
 funcIntervPhoto= ()=>{        
     let items = document.querySelectorAll('.item')
@@ -65,21 +65,3 @@ document.addEventListener("click", e=>{
 
 
 
-const cb = entries =>{
-    let cont=0
-    if(entries[0].isIntersecting){
-        document.querySelectorAll(".card-col").forEach(el => {
-            el.style.transition = `opacity 1s`
-            el.style.opacity = 1
-            
-        })
-    }else{
-        observer.unobserve(el,target)
-    }
-}
-
-const observer = new IntersectionObserver(cb, {
-    threshold: [.5]
-})    
-
-observer.observe($containerCards);
