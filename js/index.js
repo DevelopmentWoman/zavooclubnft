@@ -1,4 +1,5 @@
 let nIntervId
+const $containerCards = document.querySelector(".Check-wallet-collect");
 
 funcIntervPhoto= ()=>{        
     let items = document.querySelectorAll('.item')
@@ -25,12 +26,7 @@ if (document.querySelector(".slide-container")!=undefined){
     if (!nIntervId) {
         nIntervId = setInterval(funcIntervPhoto, 5000);
     }
-    
-    
-
-
-    
-
+  
 }
 })
 
@@ -65,3 +61,25 @@ document.addEventListener("click", e=>{
         document.querySelector('.slide').prepend(items[items.length - 1])
     }
 })
+
+
+
+
+const cb = entries =>{
+    let cont=0
+    if(entries[0].isIntersecting){
+        document.querySelectorAll(".card-col").forEach(el => {
+            el.style.transition = `opacity 1s`
+            el.style.opacity = 1
+            
+        })
+    }else{
+        observer.unobserve(el,target)
+    }
+}
+
+const observer = new IntersectionObserver(cb, {
+    threshold: [.5]
+})    
+
+observer.observe($containerCards);

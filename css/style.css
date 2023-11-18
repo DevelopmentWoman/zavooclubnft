@@ -536,12 +536,115 @@ p>a{
 /*---------------------------------CHECK WALLET----------------------------*/
 .main-check-wallet{
     padding: 0 1rem;
+    
 }
-.Check-wallet-scan .ch-search input[type="button"] {
-    background-image: url();
+.Check-wallet-scan{
+    background-color: var(--nav-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+#ch-search-form{
+    display: flex;
+    gap: .5rem;
+}
+.scan{
+    /* width: 28%; */
+}
+#wallet-address{
+    width: 75%;
+}
+.Check-wallet-scan #ch-search-form input, .scan input{
+    border: none;
+    border-radius: 5px;
+}
+.Check-wallet-scan #ch-search-form input[type="text"], .scan>input{
+    padding: 0 1rem;
+}
+#ch-search-form input[type="button"] {
+    /* width: 1rem; */
+    padding: .7rem 1rem;
+    aspect-ratio: 1/1;
+    background-color: white;
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.scan input{
+    padding: .7rem 1rem;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.Check-wallet-collect .collect-count{
+    font-size: .8rem;
+    display: none;
+}
+
+
+.Check-wallet-collect{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
 }
+.card-col{
+    width: 60%;
+    padding: 1rem;
+    aspect-ratio: 1/1.3;
+    background-color: var(--bg-l-g);
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 10px;
+    transition: all 1s ease-in;
+    opacity: 0;
+}
+.card-col>img{
+    height: 50%;
+    border-radius: 10px;
+    
+}
+.card-col #category{
+    width: 60%;
+    padding: 0.1rem 1rem;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: white;
+}
+.cont-desc-collect h3{
+    margin-bottom: .4rem;
+    font-weight: 500;
+}
+.card-col p{
+    font-size: .8rem;
+}
 
+.cont-type-netw{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+.cont-type-netw>span{
+    display: flex;
+    align-items: center;
+}
+.cont-type-netw>span>input{
+    display: inline-block;
+    border: none;
+    text-align: start;
+    background-color: transparent;
+}
+.cont-type-netw>span>img{
+    margin-top: .15rem;
+    width: .4rem;
+    
+}
 
 /*-------------------- ADD CLASS IN JAVASCRIPT (INDEX)----------------------- */
 
