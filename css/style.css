@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya:ital,wght@0,800;0,900;1,800&family=Indie+Flower&display=swap');
 
 :root{
     --bg-l-g: #f5f5f7;
@@ -44,13 +45,11 @@ header{
 }
 .logo{
     width: 15%;
-    /* aspect-ratio: 1/1; */
     display: flex;
     align-items: center;
 }
 .logo>img{
-    width: 4rem;
-    /* height: 40%; */
+    width: 2.5rem;
     aspect-ratio: 1/.5;
 }
 
@@ -122,9 +121,6 @@ main{
     gap: 2rem;
 
 }
-.container-main>h1{
-    display: none;
-}
 
 .elementor-section{
     width: 100%;
@@ -136,8 +132,12 @@ main{
     flex-direction: column;
     gap: 2rem;
  }
+ .elementor-section>.img{
+    background-image: url("../img/zavoobl011bus-1024x1024.jpg");
+    background-size: contain;
+ }
 
-.elementor-section>img, .img-form>img{
+.elementor-section>.img, .img-form>img{
     width: 100%;
     aspect-ratio: 1/1;
 
@@ -423,7 +423,7 @@ article a img{
 }
 .cont-des .read-m>a{
     color: var(--clr-link-g);
-    font-weight: 700;
+    font-weight: 600;
 }
 .cont-des>p{
     text-align: justify;
@@ -718,7 +718,7 @@ header{
 }
 
 .logo>img{
-    width: 4rem;
+    width: 3rem;
     aspect-ratio: 1/.5;
 }
 .container-nav-l{
@@ -764,66 +764,82 @@ main{
 
 
 .elem-index{
-    height: 85vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 6%, rgba(29,4,18,0.23012955182072825) 37%, rgba(245,245,247,1) 92%, rgba(245,245,247,1) 100%);
+    background-color: var(--bg-l-g);
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.9472163865546218);
+   
 }
-.elem-index::before, .elem-index::after{
-    position: relative;
-    top: -2rem;
-    content:"";
-    background-size: contain;
+.elementor-section>.img{
+    height: 100%;
+    background-image: url("../img/zavoobl011bus-1024x1024-without-bg.png");
+    background-size: 60% 100%;
     background-repeat: no-repeat;
-    width: 25%;
-    aspect-ratio: 1/1;
-    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+ }
+ .elem-index>.img::after{
+    position: absolute;
+    right: 5%;
+    width: 25rem;
+    height: 30%;
+    content:"ZAVOO CLUB NTF";
+    aspect-ratio: .6/.3;
     border-radius: .5rem;
+    color: var(--bg-l-g);
+    font-family: 'Abril Fatface', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
-.elem-index::before{
-    left:6%;
-    background-image: url('../img/slide/10.jpg');
-}
-.elem-index::after{
-    left: -6%;
-    background-image: url('../img/slide/5.jpg');
-}
+
+
+
 .container-main>h1{
-    width: 100%;
-    padding-top: 3rem;
+    position: relative;
+    top: 40%;
+    width: 50%;
     display: block;
     text-align: center;
     background-color: var(--bg-l-g);
     font-size: 2.5rem;
+    z-index: 10;
 }
 .container-main>h2{
-    margin-top: 3rem;
+    margin-top: 1rem;
     font-size: 2.5rem;
-}
-.element-1>img{
-    margin-top: -4rem;
-    width: 40%;
-    border-radius: .5rem;
-    -webkit-box-shadow: 0px 15px 21px -2px #000000; 
-    box-shadow: 0px 15px 21px -2px #000000;
 }
 
 .element-2{
     padding: 0 4rem;
     flex-direction: row;
-    gap: 0;
+    gap: 2rem;
  }
 
 
-.img-form{
-    width: 50%;
-}
 
 /* ---------SECTION REGISTER-----------*/
+.img-form{
+    height: 90%;
+
+}
+
 .register-index{
-    width: 50%;
+    height: 90%;
+    gap: 1.5rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+}
+.register-index{
+
 }
 .register-index>h2{
     margin-bottom: 1rem;
@@ -838,7 +854,7 @@ main{
 }
 .cont-name::after,.cont-lastname::after,.cont-email::after,.cont-wallet::after,.cont-address::after{
     right:0;
-    left: 88%;
+    left: 87%;
 }
 
 
@@ -857,9 +873,7 @@ main{
 
 /* ------------------------------------------FOOTER-------------------------------------------------------------------- */
 
-footer{
-    margin: 3rem 0 0;
-}
+
 .container-nav-foot{
     gap: 0;
 }
@@ -876,91 +890,89 @@ footer{
 
 }
 
+/* ------------------------ABOUT SECTION---------------------------------------------------------------- */
 
+/* --------------------------------------------MAIN ABOUT------------------------------------------------ */
+.cont-main-about{
+    height: 65vh;
+    justify-content: space-between;
+}
+.barnner-about{
+    height: 100%;
+}
+.barnner-about>img{
+    height: 70%;
+}
 
 
 /*--------------------------NTFs SECTION----------------------------------*/
 
 .ntfs-container{
-    /* position: relative; */
+    position: inherit;
     width: 100%;
+    height: 62vh;
+
 }
-.slide-container{
-    /* position: absolute;
-    width: 100%;
-    height: 100%; */
+.slide-container {
+    position: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slide-container .slide{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    overflow: hidden;
 
 }
 
-.slide-container .slide .item{
-    /* top: 0;
-    transform: translate(0,-50%); */
-}
+
 
 .slide .item:nth-child(1),
 .slide .item:nth-child(2),
-.slide .item:nth-child(3)
+.slide .item:nth-child(3),
+.slide .item:nth-child(4),
+.slide .item:nth-child(5)
 {
+    position: inherit;
     width: 25%;
     height: 100%;
+    transform: inherit;
 }
 
-.slide .item:nth-child(1){
-    top: 0;
-    left: 2.5%;
-    transform: translate(0,0);
-}
-.slide .item:nth-child(2){
-    top: 10%;
-    left: 30%;
-    height: 80%;
-    width: 20%;
-    transform: translate(0,0);
-}
-.slide .item:nth-child(3){
-
-    height: 75%;
-    width: 15%;
-    top: 12.5%;
-    left: 52.5%;
-    transform: translate(0,0);
-}
 
 .slide .item:nth-child(4){
-    height: 70%;
-    width: 10%;
-    top: 50%;
-    left: 70%;
+    height: 80%;
 }
-.slide .item:nth-child(5){
-    height: 70%;
-    width: 5%;
-    top: 50%;
-    left: 82.5%;
-}
-/* .slide .item:nth-child(5){
-    top: 15%;
-    left: calc(80% + 2.4rem);
-}
-.slide .item:nth-child(6){
-    top: 15%;
-    left: calc(80% + 4.8rem);
-} */
-.slide .item:nth-child(n+6){
-    top: 50%;
-    left: calc(80% + 4.8rem);
+
+
+.slide .item:nth-child(n+5){
+    position: inherit;
     opacity: 0;
 }
+
+
+.slide-container .button{
+    position: inherit;
+
+}
+
+
+
+
+
 
 /* **********************************scan section************************************************** */
 
 .img-form-nfts{
     width: 150%;
-    /* aspect-ratio: 1/1; */
 }
-.img-form-nfts>img{
-    /* width: 100%; */
-}
+
 /* ************************************article section********************************************** */
 
 .ntf-sect2{
@@ -984,11 +996,6 @@ footer{
     flex-direction: column;
 }
 
-.section-whitepaper>iframe{
-    /* margin: 0px auto 2rem; */
-    /* width: 100%; 
-    height: 100vh; */
-}
 
 
 /* -----------------------------BLOG---------------------------------------- */
@@ -1023,9 +1030,7 @@ article .cont-des{
     font-weight: 600;
 }
 
-.cont-des .read-m>a{
-    font-weight: 700;
-}
+
 .cont-des>p{
     font-size: 1.1rem;
 }
@@ -1078,18 +1083,15 @@ article .cont-des{
 
 
 /* ------------------------CONTACT SECTION---------------------------------------------------------------- */
-
+.contact-desk{
+    gap: 1rem;
+}
 /* --------------------------------------------MAIN CONTACT------------------------------------------------ */
 
 .sect-contact{
     gap: 1rem;
 }
-.register-index{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+
 .cont-comment>textarea{
     height: 8.6rem;
 }
@@ -1138,76 +1140,71 @@ article .cont-des{
 @media (min-width: 998px) {
 
     /* ---------------------------------------------HEADER------------------------------------------- */
-    
-    
+       
     
     .navbar{
         gap: 5rem
     }
     
     .logo>img{
-        width: 8rem;
+        width: 3.5rem;
         aspect-ratio: 1/.5;
     }
     .container-nav-l{
         gap: 1.5rem;    
     }
-    a{
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-    
+
     
     .container-nav-l>a, .collection>span>a{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
        
     
     
     
     /* --------------------------------MAIN INDEX-------------------------------------- */
-    
-    
-    
-    .elem-index{
-        height: 85vh;
-    }
 
-
-    .element-1>img{
-        width: 35%;
-    }
-    .elem-index::before, .elem-index::after{
-        width: 22%;
-    }
-    .container-main>h1{
-        width: 100%;
-        padding-top: 3rem;
-        display: block;
-        text-align: center;
-        background-color: var(--bg-l-g);
-        font-size: 2.5rem;
-    }
     .container-main>h2{
-        margin-top: 3rem;
-        font-size: 2.5rem;
+        margin-top: 2rem;
+        font-size: 2rem;
     }
-     
-    
+    .elementor-section>.img{
+        background-size: 55% 100%;
+    }
+    .elem-index>.img::after{
+        right: 10%;
+        width: 30rem;
+        font-size: 6rem;
+    }
+
+
+
+
+
+
     /* ---------SECTION REGISTER-----------*/
+    .img-form{
+        width: 50%;
+    }
+
+    .register-index{
+        height: 90%;
+        width: 50%;
+        padding: 0;
+    }
+
     .register-index>h2{
-        margin-bottom: 1.5rem;
         font-size: 1.5rem;
     }
     
     .register-index>.cont-item-form{
-        margin-bottom: 1.5rem;
+        margin-bottom: .8rem;
     }
     .register-index>div>input{
-       font-size: 1rem;
+       font-size: .8rem;
     }
     .cont-name::after,.cont-lastname::after,.cont-email::after,.cont-wallet::after,.cont-address::after{
-        left: 90%;
+        left: 92%;
     }
     
     
@@ -1225,15 +1222,9 @@ article .cont-des{
     footer{
         margin: 3rem 0 0;
     }
-    .container-nav-foot{
-        justify-content: space-between;
-    }
-    .container-nav-foot>a{
+
+     .container-nav-foot>p{
         font-size: 1.1rem;
-    }
-    
-    .container-nav-foot>p{
-        font-size: 1.2rem;
     
     }
     
@@ -1242,93 +1233,41 @@ article .cont-des{
     
     /*--------------------------NTFs SECTION----------------------------------*/
     
-    .ntfs-container{
-        /* position: relative; */
-        width: 100%;
-    }
-    .slide-container{
-        /* position: absolute;
-        width: 100%;
-        height: 100%; */
+
+ 
     
-    }
     
-    .slide-container .slide .item{
-        /* top: 0;
-        transform: translate(0,-50%); */
-    }
-/*     
     .slide .item:nth-child(1),
     .slide .item:nth-child(2),
-    .slide .item:nth-child(3)
+    .slide .item:nth-child(3),
+    .slide .item:nth-child(4),
+    .slide .item:nth-child(5),
+    .slide .item:nth-child(6),
+    .slide .item:nth-child(7)
     {
-        width: 25%;
-        height: 100%;
-    } */
-    
-    .slide .item:nth-child(1){
-        
-        width: 25%;
-        height: 100%;
-        top: 0;
-        left: 2.5%;
-        transform: translate(0,0);
-    }
-    .slide .item:nth-child(2){
-        top: 10%;
-        left: 25%;
-        height: 80%;
         width: 20%;
-        transform: translate(0,0);
-    }
-    .slide .item:nth-child(3){
-    
-        height: 75%;
-        width: 12.5%;
-        top: 12.5%;
-        left: 45%;
-        transform: translate(0,0);
-    }
-    
-    .slide .item:nth-child(4){
-        height: 70%;
-        width: 10%;
-        top: 50%;
-        left: 59%;
-    }
-    .slide .item:nth-child(5){
-        height: 65%;
-        width: 7.5%;
-        top: 50%;
-        left: 70%;
-    }
-    .slide .item:nth-child(6){
         height: 60%;
-        width: 5%;
-        top: 50%;
-        left: 79%;
-        opacity: 1;
-
     }
+    .slide-container .slide{
+        gap: 1rem;
+        height: 70%;
+    }
+    .slide .item:nth-child(5),
+    .slide .item:nth-child(6),
     .slide .item:nth-child(7){
-        height: 40%;
-        width: 5%;
-        top: 50%;
-        left: 85%;
         opacity: 1;
-    } 
-    .slide .item:nth-child(8){
-        height: 55%;
-        width: 5%;
-        top: 50%;
-        left: 91%;
-        opacity: 1;
-    } 
-    .slide .item:nth-child(n+9){
-        top: 50%;
-        left: calc(80% + 4.8rem);
+        transform: inherit;
+    }
+   
+    .slide .item:nth-child(n+8){
+        position: inherit;
         opacity: 0;
     }
+    
+  
+    
+    
+    
     
     /* **********************************scan section************************************************** */
     
@@ -1354,54 +1293,13 @@ article .cont-des{
     
     
        
-    /* -----------------------------BLOG---------------------------------------- */
-    .cont-blog{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    
-    .elem-sect-blog{
-        width: 40%;
-    }
-    
-    .cont-blog h2{
-        width: 100%;
-        padding: 0 4rem;
-    }
-    
-    .cont-blog .element-2{
-        padding: 0;
-    }
-    
-    article .cont-des{
-        padding: 0;
-        gap: 1rem;
-    }
-    .cont-des>h3>a{
-        font-size: 1.3rem;
-        font-weight: 500;
-    }
-    
-    .cont-des>h5, .cont-des>h5>a{
-        font-weight: 600;
-    }
-    
-    .cont-des .read-m>a{
-        font-weight: 700;
-    }
-    .cont-des>p{
-        font-size: 1.1rem;
-    }
-    
-    
+ 
     
     /* ------------------------CONTACT SECTION---------------------------------------------------------------- */
     
     /* --------------------------------------------MAIN CONTACT------------------------------------------------ */
     
-    .register-index{
-        gap: 1.5rem;
-    }
+
     
     /*---------------------------------CHECK WALLET----------------------------*/
     
@@ -1423,180 +1321,169 @@ article .cont-des{
     }
 
 
+    
+
+    
 @media (min-width: 1200px) {
 
-        /* ---------------------------------------------HEADER------------------------------------------- */
-                
-    
-           
-        
-        
-        
-    /* --------------------------------MAIN INDEX-------------------------------------- */
-        
-        
-    .element-1>img{
-        width: 30%;
-    }
-    .elem-index::before, .elem-index::after{
-        width: 20%;
-    }
-    
-    .container-main>h2{
-        font-size: 3rem;
-    }
-         
-        
-        /* ---------SECTION REGISTER-----------*/
+    /* ---------------------------------------------HEADER------------------------------------------- */
+       
 
+    .logo>img{
+        width: 4rem;
+        aspect-ratio: 1/.6;
+    }
+
+
+    
+   
+    
+    /* --------------------------------MAIN INDEX-------------------------------------- */
+
+    .elementor-section>.img{
+        background-size: 55% 100%;
+    }
+    .elem-index>.img::after{
+        right: 10%;
+        width: 35rem;
+        font-size: 6.5rem;
+    }
+
+
+    /* ---------SECTION REGISTER-----------*/
+
+    .register-index>h2{
+        font-size: 1.9rem;
+    }
+    
+    .register-index>.cont-item-form{
+        margin-bottom: 1.3rem;
+    }
     .register-index>div>input{
-        font-size: 1.2rem;
+       font-size: 1rem;
     }
     .cont-name::after,.cont-lastname::after,.cont-email::after,.cont-wallet::after,.cont-address::after{
-        left: 91%;
+        left: 93%;
     }
-        
-        
+    
+    
     .register-index>button{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    
     }
-        
-        
-        
-        
-        
+    
+    
+    
+    
+    
     /* ------------------------------------------FOOTER-------------------------------------------------------------------- */
-        
+    
+    footer{
+        margin: 3rem 0 0;
+    }
+
     .container-nav-foot>a{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+    
     }
-        
-    .container-nav-foot>p{
-        font-size: 1.3rem;
+     .container-nav-foot>p{
+        font-size: 1.2rem;
+    
     }
-        
-        
-        
-        
+    
+    
+    
+    
     /*--------------------------NTFs SECTION----------------------------------*/
-        
-    .ntfs-container{
+    
+
+ 
+    
+    
+    .slide .item:nth-child(1),
+    .slide .item:nth-child(2),
+    .slide .item:nth-child(3),
+    .slide .item:nth-child(4),
+    .slide .item:nth-child(5),
+    .slide .item:nth-child(6),
+    .slide .item:nth-child(7),
+    .slide .item:nth-child(8)
+    {
+        width: 20%;
+        height: 60%;
+    }
+    .slide-container .slide{
+        gap: 0.1rem;
+        height: 70%;
+    }
+    .slide .item:nth-child(5),
+    .slide .item:nth-child(6),
+    .slide .item:nth-child(7),
+    .slide .item:nth-child(8){
+        opacity: 1;
+        transform: inherit;
+    }
+   
+    .slide .item:nth-child(n+9){
+        position: inherit;
+        opacity: 0;
+    }
+    
+  
+    
+    
+    
+    
+    /* **********************************scan section************************************************** */
+    
+    .img-form-nfts{
+        width: 80%;
+        /* aspect-ratio: 1/1; */
+    }
+    /* ************************************article section********************************************** */
+    
+    .ntf-sect2{
+        gap: 2rem;
+    }
+    .cont-join-ntf{
+        gap: 2rem;
+    }
+    
+    .cont-join-ntf>h2>a{
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        /* font-weight: 700; */
+    }
+    
+    
+       
+ 
+    
+    /* ------------------------CONTACT SECTION---------------------------------------------------------------- */
+    
+    /* --------------------------------------------MAIN CONTACT------------------------------------------------ */
+    
+
+    
+    /*---------------------------------CHECK WALLET----------------------------*/
+    
+    .card-col{
+        width: 30%;
+    }
+    .card-col>img{
+        height: 45%;
+    }
+    
+    
+    /* -----------------------------------collection-------------------------------- */
+    
+    
+    .collection span{
         width: 100%;
     }
     
-        .slide .item:nth-child(1){
-            
-            width: 25%;
-            height: 100%;
-            top: 0;
-            left: 2.5%;
-            transform: translate(0,0);
-        }
-        .slide .item:nth-child(2){
-            top: 10%;
-            left: 25%;
-            height: 80%;
-            width: 20%;
-            transform: translate(0,0);
-        }
-        .slide .item:nth-child(3){
-        
-            height: 75%;
-            width: 12.5%;
-            top: 12.5%;
-            left: 45%;
-            transform: translate(0,0);
-        }
-        
-        .slide .item:nth-child(4){
-            height: 70%;
-            width: 10%;
-            top: 50%;
-            left: 59%;
-        }
-        .slide .item:nth-child(5){
-            height: 65%;
-            width: 7.5%;
-            top: 50%;
-            left: 70%;
-        }
-        .slide .item:nth-child(6){
-            height: 60%;
-            width: 5%;
-            top: 50%;
-            left: 79%;
-            opacity: 1;
-    
-        }
-        .slide .item:nth-child(7){
-            height: 40%;
-            width: 5%;
-            top: 50%;
-            left: 85%;
-            opacity: 1;
-        } 
-        .slide .item:nth-child(8){
-            height: 55%;
-            width: 5%;
-            top: 50%;
-            left: 91%;
-            opacity: 1;
-        } 
-        .slide .item:nth-child(n+9){
-            top: 50%;
-            left: calc(80% + 4.8rem);
-            opacity: 0;
-        }
-        
-        /* **********************************scan section************************************************** */
-        
-        .img-form-nfts{
-            width: 80%;
-            /* aspect-ratio: 1/1; */
-        }
-        /* ************************************article section********************************************** */
-        
-        .ntf-sect2{
-            gap: 2rem;
-        }
-        .cont-join-ntf{
-            gap: 2rem;
-        }
-        
-        .cont-join-ntf>h2>a{
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            /* font-weight: 700; */
-        }
-        
-        
-        /* ------------------------CONTACT SECTION---------------------------------------------------------------- */
-        
-        /* --------------------------------------------MAIN CONTACT------------------------------------------------ */
-        
-        .register-index{
-            gap: 1.5rem;
-        }
-        
-        /*---------------------------------CHECK WALLET----------------------------*/
-        
-        .card-col{
-            width: 30%;
-        }
-        .card-col>img{
-            height: 45%;
-        }
-        
-        
-        /* -----------------------------------collection-------------------------------- */
-        
-        
-        .collection span{
-            width: 100%;
-        }
-        
-        }
+    }
 
 
 
