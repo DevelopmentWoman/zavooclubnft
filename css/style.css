@@ -27,6 +27,8 @@ body{
 
 
 /* ---------------------------------------------HEADER------------------------------------------- */
+    
+
 header{
     position: fixed;
     top: 0;
@@ -182,7 +184,7 @@ main{
 }
 .cont-name::after,.cont-lastname::after,.cont-email::after,.cont-wallet::after,.cont-address::after{
     position: absolute;
-    right:5%;
+    right:1rem; 
 }
 .cont-name::after, .cont-lastname::after{
     content: url("../img/user.svg");
@@ -698,7 +700,6 @@ p>a{
 
 
 
-
 /* --------------------------------------------MEDIA QUERYS-------------------------------------- */
 
 
@@ -738,7 +739,7 @@ a{
 
 
 .container-nav-l>a, .collection>span>a{
-    font-size: .9rem;
+    font-size: .8rem;
 }
 .r-menu{
     display: none;
@@ -757,7 +758,7 @@ main{
     justify-content: center;
 }
 .container-main{
-    gap: 3rem;
+    gap: 4rem;
 }
 
 
@@ -781,6 +782,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: end;
+    animation: start-img-left 1.5s ease-in-out both;
  }
  .elem-index>.img::after{
     position: absolute;
@@ -821,45 +823,44 @@ main{
     flex-direction: row;
     gap: 2rem;
  }
-
-
-
-/* ---------SECTION REGISTER-----------*/
 .img-form{
-    height: 90%;
+    opacity: 0;
+} 
 
-}
+ 
+/* ---------SECTION REGISTER-----------*/
 
 .register-index{
-    height: 90%;
-    gap: 1.5rem;
+    height: 100%;
+    padding: 0;
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    /* gap: 1rem; */
+    justify-content: space-between;
+    opacity: 0; 
 }
-.register-index{
 
-}
+
 .register-index>h2{
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .register-index>.cont-item-form{
-    margin-bottom: 1.2rem;
+    /* margin-bottom: 1.2rem; */
 }
 .register-index>div>input{
    font-size: .8rem;
 }
 .cont-name::after,.cont-lastname::after,.cont-email::after,.cont-wallet::after,.cont-address::after{
-    right:0;
-    left: 87%;
+    right:-.4rem;
+    /* left: 89%; */
 }
 
 
 .register-index>button{
     width: 100%;
+    /* margin-bottom: 2rem; */
     padding: 0rem;
     border: none;
     font-weight: 700;
@@ -872,21 +873,24 @@ main{
 
 
 /* ------------------------------------------FOOTER-------------------------------------------------------------------- */
-
+footer{
+    margin: 3rem 0 0;
+    /* padding: 0 4rem; */
+}
 
 .container-nav-foot{
     gap: 0;
 }
 .container-nav-foot>a{
     width: 10%;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 400;
 }
 
 .container-nav-foot>p{
     width: 100%;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: .8rem;
 
 }
 
@@ -916,16 +920,12 @@ main{
 .slide-container {
     position: inherit;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .slide-container .slide{
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     gap: .5rem;
     overflow: hidden;
 
@@ -940,18 +940,14 @@ main{
 .slide .item:nth-child(5)
 {
     position: inherit;
+    margin-top: -5rem;
     width: 25%;
     height: 100%;
     transform: inherit;
 }
 
 
-.slide .item:nth-child(4){
-    height: 80%;
-}
-
-
-.slide .item:nth-child(n+5){
+.slide .item:nth-child(n+6){
     position: inherit;
     opacity: 0;
 }
@@ -959,6 +955,7 @@ main{
 
 .slide-container .button{
     position: inherit;
+    margin-top: -5rem;
 
 }
 
@@ -1086,6 +1083,16 @@ article .cont-des{
 .contact-desk{
     gap: 1rem;
 }
+
+.contact-section .img-form{
+    width: 70%;
+}
+
+
+.contact-desk>h2{
+    opacity: 0;
+    margin-top: -1rem;
+}
 /* --------------------------------------------MAIN CONTACT------------------------------------------------ */
 
 .sect-contact{
@@ -1154,11 +1161,11 @@ article .cont-des{
         gap: 1.5rem;    
     }
 
-    
+/*     
     .container-nav-l>a, .collection>span>a{
         font-size: 1rem;
     }
-       
+        */
     
     
     
@@ -1169,7 +1176,7 @@ article .cont-des{
         font-size: 2rem;
     }
     .elementor-section>.img{
-        background-size: 55% 100%;
+        background-size: 50% 100%;
     }
     .elem-index>.img::after{
         right: 10%;
@@ -1183,28 +1190,33 @@ article .cont-des{
 
 
     /* ---------SECTION REGISTER-----------*/
+    .sect-form-index{
+        padding: 0 10rem;
+     }
     .img-form{
         width: 50%;
+        /* height: 90%; */
     }
 
     .register-index{
-        height: 90%;
+        /* height: 90%; */
         width: 50%;
         padding: 0;
     }
 
     .register-index>h2{
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
     }
     
     .register-index>.cont-item-form{
         margin-bottom: .8rem;
     }
-    .register-index>div>input{
+    /* .register-index>div>input{
        font-size: .8rem;
-    }
+    } */
     .cont-name::after,.cont-lastname::after,.cont-email::after,.cont-wallet::after,.cont-address::after{
-        left: 92%;
+        /* left: 82%; */
+        /* right: 10rem; */
     }
     
     
@@ -1219,14 +1231,11 @@ article .cont-des{
     
     /* ------------------------------------------FOOTER-------------------------------------------------------------------- */
     
-    footer{
-        margin: 3rem 0 0;
-    }
 
-     .container-nav-foot>p{
+     /* .container-nav-foot>p{
         font-size: 1.1rem;
     
-    }
+    } */
     
     
     
@@ -1237,35 +1246,35 @@ article .cont-des{
  
     
     
-    .slide .item:nth-child(1),
-    .slide .item:nth-child(2),
-    .slide .item:nth-child(3),
-    .slide .item:nth-child(4),
-    .slide .item:nth-child(5),
-    .slide .item:nth-child(6),
-    .slide .item:nth-child(7)
-    {
-        width: 20%;
-        height: 60%;
-    }
-    .slide-container .slide{
-        gap: 1rem;
-        height: 70%;
-    }
-    .slide .item:nth-child(5),
-    .slide .item:nth-child(6),
-    .slide .item:nth-child(7){
-        opacity: 1;
-        transform: inherit;
-    }
-   
-    .slide .item:nth-child(n+8){
-        position: inherit;
-        opacity: 0;
-    }
-    
-  
-    
+.slide .item:nth-child(1),
+.slide .item:nth-child(2),
+.slide .item:nth-child(3),
+.slide .item:nth-child(4),
+.slide .item:nth-child(5),
+.slide .item:nth-child(6),
+.slide .item:nth-child(7)
+{
+    position: inherit;
+    margin-top: -5rem;
+    width: 20%;
+    height: 100%;
+    transform: inherit;
+}
+
+.slide .item:nth-child(5),
+.slide .item:nth-child(6),
+.slide .item:nth-child(7)
+{
+    opacity: 1;
+}
+.slide .item:nth-child(n+8){
+    position: inherit;
+    opacity: 0;
+}
+
+
+
+
     
     
     
@@ -1300,7 +1309,12 @@ article .cont-des{
     /* --------------------------------------------MAIN CONTACT------------------------------------------------ */
     
 
+    /* -----------------------------------------BLOG SECTION------------------------------------------------------ */
     
+    .elem-sect-blog{
+        width: 45%;
+    }
+
     /*---------------------------------CHECK WALLET----------------------------*/
     
     .card-col{
@@ -1331,7 +1345,7 @@ article .cont-des{
 
     .logo>img{
         width: 4rem;
-        aspect-ratio: 1/.6;
+        /* aspect-ratio: 1/.5; */
     }
 
 
@@ -1341,7 +1355,7 @@ article .cont-des{
     /* --------------------------------MAIN INDEX-------------------------------------- */
 
     .elementor-section>.img{
-        background-size: 55% 100%;
+        background-size: 45% 100%;
     }
     .elem-index>.img::after{
         right: 10%;
@@ -1353,17 +1367,18 @@ article .cont-des{
     /* ---------SECTION REGISTER-----------*/
 
     .register-index>h2{
-        font-size: 1.9rem;
+        /* font-size: 1.9rem; */
     }
     
     .register-index>.cont-item-form{
-        margin-bottom: 1.3rem;
+        /* margin-bottom: 1.3rem; */
     }
-    .register-index>div>input{
+    /* .register-index>div>input{
        font-size: 1rem;
-    }
+    } */
     .cont-name::after,.cont-lastname::after,.cont-email::after,.cont-wallet::after,.cont-address::after{
-        left: 93%;
+        /* left: 85%; */
+        /* right: 10rem; */
     }
     
     
@@ -1378,18 +1393,15 @@ article .cont-des{
     
     /* ------------------------------------------FOOTER-------------------------------------------------------------------- */
     
-    footer{
-        margin: 3rem 0 0;
-    }
-
-    .container-nav-foot>a{
+    
+    /* .container-nav-foot>a{
         font-size: 1.1rem;
     
-    }
-     .container-nav-foot>p{
+    } */
+     /* .container-nav-foot>p{
         font-size: 1.2rem;
     
-    }
+    } */
     
     
     
@@ -1398,41 +1410,38 @@ article .cont-des{
     
 
  
+.slide{
+    width: 80%;
+}  
     
-    
-    .slide .item:nth-child(1),
-    .slide .item:nth-child(2),
-    .slide .item:nth-child(3),
-    .slide .item:nth-child(4),
-    .slide .item:nth-child(5),
-    .slide .item:nth-child(6),
-    .slide .item:nth-child(7),
-    .slide .item:nth-child(8)
-    {
-        width: 20%;
-        height: 60%;
-    }
-    .slide-container .slide{
-        gap: 0.1rem;
-        height: 70%;
-    }
-    .slide .item:nth-child(5),
-    .slide .item:nth-child(6),
-    .slide .item:nth-child(7),
-    .slide .item:nth-child(8){
-        opacity: 1;
-        transform: inherit;
-    }
-   
-    .slide .item:nth-child(n+9){
-        position: inherit;
-        opacity: 0;
-    }
-    
-  
-    
-    
-    
+       
+.slide .item:nth-child(1),
+.slide .item:nth-child(2),
+.slide .item:nth-child(3),
+.slide .item:nth-child(4),
+.slide .item:nth-child(5),
+.slide .item:nth-child(6),
+.slide .item:nth-child(7)
+{
+    position: inherit;
+    margin-top: -5rem;
+    width: 16.66%;
+    height: 100%;
+    transform: inherit;
+}
+
+.slide .item:nth-child(5),
+.slide .item:nth-child(6),
+.slide .item:nth-child(7)
+{
+    opacity: 1;
+}
+.slide .item:nth-child(n+8){
+    position: inherit;
+    opacity: 0;
+}
+
+ 
     
     /* **********************************scan section************************************************** */
     
@@ -1463,7 +1472,12 @@ article .cont-des{
     /* ------------------------CONTACT SECTION---------------------------------------------------------------- */
     
     /* --------------------------------------------MAIN CONTACT------------------------------------------------ */
+    /* -----------------------------------------BLOG SECTION------------------------------------------------------ */
     
+    /* .elem-sect-blog{
+        width: 40%;
+    }
+     */
 
     
     /*---------------------------------CHECK WALLET----------------------------*/
@@ -1511,6 +1525,16 @@ article .cont-des{
     }
     to{
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes start-img-left {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
         opacity: 1;
     }
 }
