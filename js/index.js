@@ -65,3 +65,19 @@ document.addEventListener("click", e=>{
 
 
 
+const $form = document.querySelector(".sect-form-index");
+
+const cb = entries =>{
+
+    if(entries[0].isIntersecting){
+        document.querySelector(".register-index").style.animation="start-img 1s both"
+        document.querySelector(".img-form").style.animation="start-img 1s both"
+            console.log("intersectando");
+    }
+}
+
+const observer = new IntersectionObserver(cb, {
+    threshold: [.25]
+})    
+
+observer.observe($form);
